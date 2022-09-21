@@ -1,4 +1,3 @@
 # KUP
-- Troublepunk PlayFab Klaymakers
-- ver. Klaymaker Hackerthon
+- Klaymakers Hackerthon PlayFab
 - CloudScript.js
