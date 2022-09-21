@@ -1,5 +1,29 @@
+const LeaderboardPrefix = {
+    Daily: "Daily_",
+    Weekly: "Weekly_",
+    Total: "Total_"
+};
 
+handlers.updatePlayerLeaderboard = function (args, context) {
+    let [LeaderboardName, Value] = args;
+    server.UpdatePlayerStatistics({
+        PlayFabId: currentPlayerId,
+        Statistics: [{
+            StatisticName: LeaderboardPrefix.Daily + LeaderboardName,
+            Value: Value
+        },
+        {
+            StatisticName: LeaderboardPrefix.Weekly + LeaderboardName,
+            Value: Value
+        },
+        {
+            StatisticName: LeaderboardPrefix.Total + LeaderboardName,
+            Value: Value
+        }]
+    })
+};
 
+// ---- PlayFab Default Methods
 
 // This is a Cloud Script function. "args" is set to the value of the "FunctionParameter" 
 // parameter of the ExecuteCloudScript API.
