@@ -5,21 +5,21 @@ const LeaderboardPrefix = {
 };
 
 handlers.updatePlayerLeaderboard = function (args, context) {
-    const argsString = JSON.stringify(args);
-    const [LeaderboardName, Value] = argsString;
+    const name = args["LeaderboardName"];
+    const value = args["Value"];
     server.UpdatePlayerStatistics({
         PlayFabId: currentPlayerId,
         Statistics: [{
-            StatisticName: LeaderboardPrefix.Daily + LeaderboardName,
-            Value: Value
+            StatisticName: LeaderboardPrefix.Daily + name,
+            Value: value
         },
         {
-            StatisticName: LeaderboardPrefix.Weekly + LeaderboardName,
-            Value: Value
+            StatisticName: LeaderboardPrefix.Weekly + name,
+            Value: value
         },
         {
-            StatisticName: LeaderboardPrefix.Total + LeaderboardName,
-            Value: Value
+            StatisticName: LeaderboardPrefix.Total + name,
+            Value: value
         }]
     })
 };
