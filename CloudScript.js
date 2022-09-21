@@ -5,8 +5,8 @@ const LeaderboardPrefix = {
 };
 
 handlers.updatePlayerLeaderboard = function (args, context) {
-    log.debug(args);
-    let [LeaderboardName, Value] = args;
+    const argsString = JSON.stringify(args);
+    const [LeaderboardName, Value] = argsString;
     server.UpdatePlayerStatistics({
         PlayFabId: currentPlayerId,
         Statistics: [{
