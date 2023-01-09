@@ -3,7 +3,7 @@
 > 🎉 KUP won 1st place in The Metaverse+ NFTs Track at KlayMakers2022. 🎉  
 > https://dorahacks.io/hackathon/klaymakers22/results
 
-# KUP Plyfab repo information
+# KUP Playfab repo information
 - Klaymakers Hackerthon PlayFab
 - CloudScript.js
 
